@@ -1,7 +1,13 @@
-// Welcome message
-console.log("Welcome to Yahaya Magaji's Portfolio!");
+console.log("Portfolio Loaded");
 
-// Show welcome alert when page loads
-window.onload = function () {
-    alert("Welcome to Yahaya Magaji's Portfolio Website!");
-};
+const button = document.getElementById("theme-btn");
+
+button.addEventListener("click", function () {
+    document.body.classList.toggle("dark-mode");
+
+    if(document.body.classList.contains("dark-mode")){
+        button.innerHTML = "☀️";
+    }else{
+        button.innerHTML = "🌙";
+    }
+});
